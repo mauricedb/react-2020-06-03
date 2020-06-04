@@ -1,9 +1,20 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  createChangeFirstName,
+  createChangeLastName,
+  createChangeProperty,
+} from "../store/actions";
 
 function PersonEditor() {
-  const [person, setPerson] = React.useState({
-    firstName: "Chuck",
-    lastName: "Norris",
+  // const [person, setPerson] = React.useState({
+  //   firstName: "Chuck",
+  //   lastName: "Norris",
+  // });
+
+  const dispatch = useDispatch();
+  const person = useSelector(function (state) {
+    return state;
   });
 
   return (
@@ -16,7 +27,8 @@ function PersonEditor() {
             className="value"
             value={person.firstName}
             onChange={(e) => {
-              setPerson({ ...person, firstName: e.target.value });
+              dispatch(createChangeFirstName(e.target.value));
+              // setPerson({ ...person, firstName: e.target.value });
             }}
           />
         </label>
@@ -29,7 +41,9 @@ function PersonEditor() {
             className="value"
             value={person.lastName}
             onChange={(e) => {
-              setPerson({ ...person, lastName: e.target.value });
+              // dispatch(createChangeLastName(e.target.value));
+              dispatch(createChangeProperty("lastName", e.target.value));
+              // setPerson({ ...person, lastName: e.target.value });
             }}
           />
         </label>
