@@ -1,19 +1,17 @@
 import React from "react";
 import Greeter from "./Greeter";
+import useTimer from "./useTimer";
 
 function Clock() {
-  const [time, setTime] = React.useState(new Date());
+  const userName = "Timer";
+  const o = React.useMemo(() => ({ firstName: userName }), [userName]);
 
-  React.useEffect(() => {
-    const handle = setInterval(() => setTime(new Date()), 1000);
-
-    return () => clearInterval(handle);
-  }, []);
+  const time = useTimer(2500);
 
   return (
     <div>
       <div>The time is: {time.toLocaleTimeString()}</div>
-      {/* <Greeter person={{ firstName: "Timer" }} /> */}
+      <Greeter person={o} />
     </div>
   );
 }

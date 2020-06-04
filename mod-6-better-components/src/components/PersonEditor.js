@@ -33,4 +33,6 @@ class PersonEditor extends Component {
   }
 }
 
+PersonEditor.displayName = "PersonEditor";
+
 export default PersonEditor;

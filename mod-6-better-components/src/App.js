@@ -10,6 +10,8 @@ function App() {
   return (
     <div className="App">
       <Greeter person={{ firstName: "Maurice" }} />
+      {/* <Greeter person={{ myName: "Maurice" }} />
+      <Greeter /> */}
       <hr />
       <Clock />
       <hr />
