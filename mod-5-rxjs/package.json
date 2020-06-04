@@ -11,6 +11,7 @@
   "author": "Maurice de Beijer",
   "license": "ISC",
   "dependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "rxjs": "^6.5.5"
   }
 }
