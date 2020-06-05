@@ -8,7 +8,8 @@ import Counter from "./components/Counter";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" data-test-id="TheApp">
+      <Greeter person={{ firstName: "Maurice" }} />
       <Greeter person={{ firstName: "Maurice" }} />
       <hr />
       <Clock />
