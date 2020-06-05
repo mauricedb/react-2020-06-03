@@ -3,7 +3,16 @@
 exports[`the calculator can subtract 1 - 1 === 0 1`] = `
 Array [
   Object {
-    "name": "Jack",
+    "name": "Mike",
+    "x": 1,
+  },
+]
+`;
+
+exports[`the calculator can subtract toMatchSnapshot 1`] = `
+Array [
+  Object {
+    "name": "Mike",
     "x": 1,
   },
 ]

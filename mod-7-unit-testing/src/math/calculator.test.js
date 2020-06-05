@@ -59,10 +59,19 @@ describe("the calculator", function () {
       expect(result).toBe(0);
     });
 
-    test("1 - 1 === 0", function () {
-      const result = calc.subtract(1, 1);
+    test("toMatchSnapshot", function () {
+      expect([{ x: 1, name: "Mike" }]).toMatchSnapshot();
+    });
 
-      expect([{ x: 1, name: "John" }]).toMatchSnapshot();
+    test("toMatchInlineSnapshot", function () {
+      expect([{ x: 1, name: "Mike" }]).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "name": "Mike",
+            "x": 1,
+          },
+        ]
+      `);
     });
   });
 });
